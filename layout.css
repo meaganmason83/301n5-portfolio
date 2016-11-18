@@ -11,7 +11,11 @@
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
-#copyright {
+#myPortfolios {
+  display: inline-block;
+}
+
+footer {
   font-size: 10px;
   text-align: center;
 }
