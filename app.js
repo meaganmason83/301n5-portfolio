@@ -2,11 +2,11 @@
 
 var portfolios = [];
 
-function Portfolio(title, url, language, description) {
-  this.title = title;
-  this.url = url;
-  this.language = language;
-  this.description = description;
+function Portfolio(opts) {
+  this.title = opts.title;
+  this.url = opts.url;
+  this.language = opts.language;
+  this.description = opts.description;
 }
 
 // function makePortfolio() {
@@ -20,9 +20,10 @@ function Portfolio(title, url, language, description) {
 Portfolio.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.find('h1').text(this.title);
-  $newArticle.find('url', this.url);
+  $newArticle.attr('href', this.url);
   $newArticle.find('p').text(this.language);
   $newArticle.find('.article-body').html(this.description);
+
   $newArticle.removeClass('template');
   return $newArticle;
 };
@@ -30,6 +31,6 @@ Portfolio.prototype.toHtml = function() {
 localData.forEach(function(theCurrentArticleObject) {
   portfolios.push(new Portfolio(theCurrentArticleObject));
 });
-portfolios.forEach(function(article) {
-  $('#myPortfolios').append(article.toHtml());
+portfolios.forEach(function(portfolio) {
+  $('#myPortfolios').append(portfolio.toHtml());
 });

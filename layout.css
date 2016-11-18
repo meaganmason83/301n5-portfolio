@@ -5,7 +5,7 @@
 .border {
   border: 0;
   height: 1px;
-  margin-left: 250px;
+  margin-left: 275px;
   margin-right: 275px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
@@ -15,7 +15,25 @@
   display: inline-block;
 }
 
+#projCSS {
+  font-size: 15px;
+  text-align: center;
+  margin-left: 375px;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 35px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  opacity: .6;
+
+}
+
+#projh1 {
+  font-size: 20px;
+}
+
 footer {
   font-size: 10px;
   text-align: center;
+  margin-top: 50px;
 }
