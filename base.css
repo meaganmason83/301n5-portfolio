@@ -1,6 +1,43 @@
 body {
   background-image: url('images/aurora.jpg');
-  /*background-image: url('images/snow.jpg');
-  background-image: url('images/moutain.jpg');*/
+  /*background-image: url('images/snow.jpg');*/
+  /*background-image: url('images/mountain.jpg');*/
   background-size: cover;
+  font-family: 'Rock Salt', cursive;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+img {
+  width: 30px;
+  padding: 8px;
+}
+
+#icons {
+  margin-left: 455px;
+}
+
+.border {
+  border: 0;
+  height: 1px;
+  margin-left: 250px;
+  margin-right: 275px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+#copyright {
+  font-size: 10px;
+  text-align: center;
 }
