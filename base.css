@@ -1,0 +1,6 @@
+body {
+  background-image: url('images/aurora.jpg');
+  /*background-image: url('images/snow.jpg');
+  background-image: url('images/moutain.jpg');*/
+  background-size: cover;
+}
