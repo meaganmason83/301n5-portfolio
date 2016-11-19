@@ -20,10 +20,9 @@ function Portfolio(opts) {
 Portfolio.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.find('h1').text(this.title);
-  $newArticle.attr('href', this.url);
+  $newArticle.find('#projCSS a').attr('href', this.url);
   $newArticle.find('p').text(this.language);
   $newArticle.find('.article-body').html(this.description);
-
   $newArticle.removeClass('template');
   return $newArticle;
 };
