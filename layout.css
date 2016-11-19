@@ -32,6 +32,17 @@
   font-size: 20px;
 }
 
+.box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
 footer {
   font-size: 10px;
   text-align: center;
