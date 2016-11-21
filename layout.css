@@ -1,6 +1,67 @@
-#icons {
-  margin-left: 455px;
+nav.main-nav {
+  margin-left: 300px;
 }
+nav.main-nav ul {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+  text-align: center;
+  background: #fff;
+  opacity: .9;
+}
+
+nav.main-nav li {
+  padding-right: 40px;
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: .3s;
+}
+
+nav.main-nav a:hover {
+  background-color: #84ccba;
+}
+
+nav.main-nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media only screen and (min-width: 640px) {
+  nav.main-nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  nav.main-nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+
+.menu {
+	content: "images/bars.png";
+}
+
+.menu {
+  font-size: 3em;
+  float: right;
+}
+
+@media only screen and (min-width: 640px) {
+  .menu {
+    display: none;
+  }
 
 .border {
   border: 0;
@@ -11,7 +72,13 @@
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+#icons {
+  /*display: none;*/
+  margin-top: 100px;
+  margin-left: 500px;
+}
 #myPortfolios {
+  margin-top: 165px;
   display: inline-block;
 }
 
@@ -32,19 +99,6 @@
   font-size: 20px;
 }
 
-.box{
-    display: none;
-    width: 100%;
-}
-
-a:hover + .box,.box:hover{
-    display: block;
-    position: relative;
-    z-index: 100;
-}
-
-footer {
-  font-size: 10px;
-  text-align: center;
-  margin-top: 50px;
+.template {
+  display: none;
 }

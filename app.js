@@ -1,6 +1,7 @@
 'use strict';
 
 var portfolios = [];
+var portfolioView = {};
 
 function Portfolio(opts) {
   this.title = opts.title;
@@ -9,14 +10,6 @@ function Portfolio(opts) {
   this.language = opts.language;
   this.description = opts.description;
 }
-
-// function makePortfolio() {
-//   new Portfolio('Campfire Coffee', 'https://meaganmason83.github.io/class_8_lab/', 'HTML/CSS/JavaScript', 'Individual Project');
-//   new Portfolio('Chocolate Pizza', 'https://meaganmason83.github.io/ChocoPizza/', 'HTML/CSS/JavaScript', 'Individual Project');
-//   new Portfolio('Bus Mall', 'https://meaganmason83.github.io/BusMall/', 'HTML/CSS/JavaScript', 'Individual Project');
-//   new Portfolio('Home Field Advantage', 'https://rtuts67.github.io/Final_Project_HFA_201n6/', 'HTML/CSS/JavaScript', 'Group Project');
-// }
-// makePortfolio();
 
 Portfolio.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
@@ -35,3 +28,15 @@ localData.forEach(function(theCurrentArticleObject) {
 portfolios.forEach(function(portfolio) {
   $('#myPortfolios').append(portfolio.toHtml());
 });
+
+portfolioView.handleMainNav = function () {
+  $('#icons').hide();
+  $('#myPortfolios').hide();
+  $('.main-nav').on('click', '.tab', function() {
+
+    //   $('#myPortfolios').fadeIn(1000);
+  });
+  $('.main-nav .tab:first').click();
+};
+
+portfolioView.handleMainNav();
