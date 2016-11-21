@@ -24,9 +24,13 @@ img {
   padding: 8px;
 }
 
+a {
+  text-decoration:none;
+}
 
 footer {
   font-size: 10px;
   text-align: center;
-  margin-top: 300px;
+  margin-top: 200px;
+  margin-bottom: 20px;
 }

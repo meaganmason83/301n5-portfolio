@@ -36,10 +36,16 @@ portfolioView.handleMainNav = function () {
   $('.main-nav').on('click', '.tab', function() {
     if ($(this).data('navbar') === 'portfolio') {
       $('#myPortfolios').fadeIn(1000);
+      $('#icons').hide();
+      $('#aboutme').hide();
     } else if ($(this).data('navbar') === 'contact') {
       $('#icons').fadeIn(1000);
+      $('#aboutme').hide();
+      $('#myPortfolios').hide();
     } else if ($(this).data('navbar') === 'about') {
       $('#aboutme').fadeIn(1000);
+      $('#icons').hide();
+      $('#myPortfolios').hide();
     }
   });
   $('.main-nav .tab:first').click();
