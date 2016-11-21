@@ -33,8 +33,8 @@ portfolioView.handleMainNav = function () {
   $('#icons').hide();
   $('#myPortfolios').hide();
   $('.main-nav').on('click', '.tab', function() {
-
-    //   $('#myPortfolios').fadeIn(1000);
+    if ($(this).data('navbar') === 'portfolio')
+      $('#myPortfolios').fadeIn(1000);
   });
   $('.main-nav .tab:first').click();
 };
