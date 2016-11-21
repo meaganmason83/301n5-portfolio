@@ -32,9 +32,15 @@ portfolios.forEach(function(portfolio) {
 portfolioView.handleMainNav = function () {
   $('#icons').hide();
   $('#myPortfolios').hide();
+  $('#aboutme').hide();
   $('.main-nav').on('click', '.tab', function() {
-
-    //   $('#myPortfolios').fadeIn(1000);
+    if ($(this).data('navbar') === 'portfolio') {
+      $('#myPortfolios').fadeIn(1000);
+    } else if ($(this).data('navbar') === 'contact') {
+      $('#icons').fadeIn(1000);
+    } else if ($(this).data('navbar') === 'about') {
+      $('#aboutme').fadeIn(1000);
+    }
   });
   $('.main-nav .tab:first').click();
 };
