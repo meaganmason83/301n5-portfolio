@@ -20,6 +20,9 @@ Portfolio.prototype.toHtml = function() {
   $newArticle.find('.article-body').html(this.description);
   $newArticle.removeClass('template');
   return $newArticle;
+  // var htmlTemp = $('#handlebarsTemplate').html();
+  // var temp = Handlebars.compile(htmlTemp);
+  // return temp(this);
 };
 
 localData.forEach(function(theCurrentArticleObject) {
