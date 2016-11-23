@@ -5,7 +5,23 @@
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="layout.css">
   <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
-  <title>Meagan Mason</title>
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <!-- Handlebars template is not rendering -->
+  <script id="handlebarsTemplate" type="text/x-handlebars-template">
+    <article class="template" data-title="placeholder-title">
+      <header>
+        <div id="projCSS">
+          <h1 id="projh1">{{title}}</h1>
+          <a href="{{url}}"><iframe style="width:300px; height:200px;" src="{{iframe}}"></iframe></a>
+          <br>written in <p>{{language}}</p>
+          <section class="article-body">{{{description}}}</section>
+        </div>
+      </header>
+    </article>
+  </section>
+</script>
+<!-- .... -->
+<title>Meagan Mason</title>
 </head>
 <body>
   <header>
@@ -34,6 +50,7 @@
       <a href="mailto:meaganmason83@gmail.com"><img src="images/email.png"</a>
       <a href="https://www.linkedin.com/in/meagan-mason" target="_blank"><img src="images/social.png"</a>
     </section>
+
     <section id="myPortfolios">
       <article class="template" data-title="placeholder-title">
         <header>
@@ -51,6 +68,7 @@
     Meagan Mason's Portfolio &copy; 2017. All Rights Reserved.
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script type="text/javascript" src="projectdata.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </body>
