@@ -72,8 +72,14 @@ nav.main-nav a.active {
 
 #myPortfolios {
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: 80px;
   display: inline-block;
+}
+
+#myPortfolios a {
+  display:block;
+  padding-top: 130px;
+  margin-top: -100px;
 }
 
 #projCSS {
@@ -87,10 +93,6 @@ nav.main-nav a.active {
   background: #FFF;
   opacity: .8;
 
-}
-
-#projh1 {
-  font-size: 20px;
 }
 
 .template {
