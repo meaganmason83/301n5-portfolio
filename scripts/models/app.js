@@ -1,15 +1,17 @@
 'use strict';
 
-var portfolios = [];
-
-
 function Portfolio(opts) {
-  this.title = opts.title;
-  this.url = opts.url;
-  this.iframe = opts.iframe;
-  this.language = opts.language;
-  this.description = opts.description;
+  for (let keys in opts) {
+    this[keys] = opts[keys];
+  // this.title = opts.title;
+  // this.url = opts.url;
+  // this.iframe = opts.iframe;
+  // this.language = opts.language;
+  // this.description = opts.description;
+  }
 }
+
+Portfolio.allPortfolios = [];
 
 Portfolio.prototype.toHtml = function() {
   var htmlTemp = Handlebars.compile($('#handlebarsTemplate').html());
@@ -17,13 +19,13 @@ Portfolio.prototype.toHtml = function() {
 };
 
 //combining push and append
-Portfolio.loadAll = function(inputData) {
-  inputData.forEach(function(theCurrentArticleObject) {
-    portfolios.push(new Portfolio(theCurrentArticleObject));
-  }).forEach(function(portfolio) {
-    $('#myPortfolios').append(portfolio.toHtml());
-  });
-};
+// Portfolio.loadAll = function(inputData) {
+//   inputData.forEach(function(theCurrentArticleObject) {
+//     Portfolio.allPortfolios.push(new Portfolio(theCurrentArticleObject));
+//   }).forEach(function() {
+//     $('#myPortfolios').append(Portfolio.allPortfolios.toHtml());
+//   })
+// };
 
 Portfolio.fetchAll = function() {
   if (localStorage.localdata) {
@@ -31,7 +33,7 @@ Portfolio.fetchAll = function() {
     Portfolio.loadAll(localData);
     portfolioView.handleMainNav();
   } else {
-    $.getJSON('../../../data/localdata.json', function(data) {
+    $.getJSON('data/localdata.json', function(data) {
       localStorage.setItem('localdata', JSON.stringify(data));
       var localData = JSON.parse(localStorage.getItem('localdata'));
       Portfolio.loadAll(localData);
@@ -39,3 +41,4 @@ Portfolio.fetchAll = function() {
     });
   }
 };
+// Portfolio.fetchAll();

@@ -25,4 +25,4 @@ portfolioView.handleMainNav = function () {
 };
 
 portfolioView.handleMainNav();
-Portfolio.fetchAll();
+// Portfolio.fetchAll();
