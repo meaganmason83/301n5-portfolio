@@ -25,7 +25,9 @@
     });
     $('.main-nav .tab:first').click();
   };
-  Portfolio.fetchAll(portfolioView.handleMainNav);
+
+  Portfolio.fetchAll();
   portfolioView.handleMainNav();
+
   module.portfolioView = portfolioView;
 })(window);

@@ -15,28 +15,33 @@
     $('#myPortfolios').append(htmlTemp(this));
   };
 
-// combining push and append
+
   Portfolio.loadAll = function(inputData) {
     inputData.forEach(function(theCurrentArticleObject) {
       Portfolio.allPortfolios.push(new Portfolio(theCurrentArticleObject));
-    }).forEach(function() {
-      $('#myPortfolios').append(Portfolio.allPortfolios.toHtml());
     })
   };
+
+  Portfolio.renderAll = function(inputData) {
+    Portfolio.allPortfolios.forEach(function(allPortfolios) {
+      $('#myPortfolios').append(allPortfolios.toHtml());
+    })
+  }
 
   Portfolio.fetchAll = function() {
     if (localStorage.localdata) {
       var localData = JSON.parse(localStorage.getItem('localdata'));
       Portfolio.loadAll(localData);
-      portfolioView.handleMainNav();
+      Portfolio.renderAll(localData);
     } else {
       $.getJSON('data/localdata.json', function(data) {
         localStorage.setItem('localdata', JSON.stringify(data));
         var localData = JSON.parse(localStorage.getItem('localdata'));
         Portfolio.loadAll(localData);
-        portfolioView.handleMainNav();
+        Portfolio.renderAll(localData);
       });
     }
   };
+
   module.Portfolio = Portfolio;
 })(window);
