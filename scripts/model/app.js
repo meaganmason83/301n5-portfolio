@@ -22,11 +22,6 @@
     })
   };
 
-  Portfolio.renderAll = function(inputData) {
-    Portfolio.allPortfolios.forEach(function(allPortfolios) {
-      $('#myPortfolios').append(allPortfolios.toHtml());
-    })
-  }
 
   Portfolio.fetchAll = function() {
     if (localStorage.localdata) {
