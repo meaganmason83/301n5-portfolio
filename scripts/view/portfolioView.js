@@ -26,12 +26,6 @@
     $('.main-nav .tab:first').click();
   };
 
-  Portfolio.renderAll = function(inputData) {
-    Portfolio.allPortfolios.forEach(function(allPortfolios) {
-      $('#myPortfolios').append(allPortfolios.toHtml());
-    })
-  }
-
   Portfolio.fetchAll();
   portfolioView.handleMainNav();
 
