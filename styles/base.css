@@ -1,7 +1,5 @@
 html {
-  background: url('../vendors/images/aurora.jpg') no-repeat center center fixed;
-  /*background-image: url('images/snow.jpg');*/
-  /*background-image: url('images/mountain.jpg');*/
+  background: url('../vendor/images/aurora.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Rock Salt', cursive;
 }
