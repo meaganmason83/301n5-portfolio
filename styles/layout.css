@@ -1,0 +1,100 @@
+nav.main-nav {
+  margin-left: 200px;
+  margin-top: 50px;
+}
+nav.main-nav ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: #fff;
+  opacity: .9;
+}
+
+nav.main-nav li {
+  padding-right: 60px;
+  display:inline-block;
+  float: left;
+  margin-right: 1px;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  transition: .3s;
+}
+
+nav.main-nav a:hover {
+  background-color: #84ccba;
+}
+
+nav.main-nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+@media only screen and (min-width: 640px) {
+  nav.main-nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+
+  nav.main-nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+
+.border {
+  border: 0;
+  height: 1px;
+  margin-left: 275px;
+  margin-right: 275px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+#aboutme {
+  font-size: 20px;
+  text-align: center;
+  margin: 200px 260px 200px 260px;
+}
+
+#icons {
+  margin-top: 150px;
+  margin-left: 480px;
+}
+
+#myPortfolios {
+  margin-top: 100px;
+  margin-left: 80px;
+  display: inline-block;
+}
+
+#myPortfolios a {
+  display:block;
+  padding-top: 130px;
+  margin-top: -100px;
+}
+
+#projCSS {
+  font-size: 15px;
+  text-align: center;
+  margin-left: 375px;
+  margin-bottom: 20px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 35px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  opacity: .8;
+
+}
+
+.template {
+  display: none;
+}
