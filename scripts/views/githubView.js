@@ -13,7 +13,7 @@
     );
   };
 
-  //githubObj.getRepos(githubView.renderAll);
+  githubObj.getRepos(githubView.renderAll);
 
   module.githubView = githubView;
 })(window);
