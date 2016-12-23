@@ -8,17 +8,16 @@
 
   githubObj.getRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github/com/user/repos?type=owner',
+      url: 'https://api.github.com/user/repos?type=owner',
       method: 'GET',
       headers: {
-        'Authorization': 'token ' + githubToken},
+        'Authorization':'token ' + githubToken},
       success: function(data) {
-        console.log(data);
         githubObj.myRepos = data;
         callback();
       }
-    })
-  }
+    });
+  };
 
   githubObj.withTheAttribute = function(myAttr) {
     return githubObj.myRepos.filter(function(aRepo) {
