@@ -8,7 +8,6 @@ var express = require('express'),
 app.use(express.static('./'));
 
 app.get('/github/*', function(request, response) {
-
   (requestProxy({
     url: `https://api.github.com/${request.params[0]}`,
     headers: {
